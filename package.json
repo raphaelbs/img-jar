@@ -1,0 +1,32 @@
+{
+  "author": {
+    "name": "Raphael Brandão"
+  },
+  "dependencies": {},
+  "description": "An embeed java image processor to crop and create resized images.",
+  "keywords": [
+    "crop",
+    "image",
+    "jar",
+    "java",
+    "processor",
+    "resize"
+  ],
+  "license": "MIT",
+  "main": "img-jar.js",
+  "maintainers": [
+    {
+      "name": "ralpha",
+      "email": "raphael.b.souza@hotmail.com"
+    },
+    {
+      "name": "raphaelbs",
+      "email": "raphael.b.souza@hotmail.com"
+    }
+  ],
+  "name": "img-jar",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "version": "1.2.3"
+}
