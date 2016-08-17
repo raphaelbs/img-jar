@@ -12,7 +12,7 @@ function imgJar(origem, destino, jsonCorte, jsonTamanhos, callback){
 		callback = jsonTamanhos;
 		jsonTamanhos = undefined;
 	}
-	var comando = 'java -jar "' + path.join(__dirname, 'img-jar.jar') + '"' + origem + '" "' + destino + '" "' + JSON.stringify(jsonCorte) + '"';
+	var comando = 'java -jar "' + path.join(__dirname, 'img-jar.jar') + '" "' + origem + '" "' + destino + '" "' + JSON.stringify(jsonCorte) + '"';
 	if(jsonTamanhos) comando += ' "' + JSON.stringify(jsonTamanhos) + '"';
 	console.log(comando);
 	exec(comando, callback);
