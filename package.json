@@ -14,9 +14,9 @@
   ],
   "license": "MIT",
   "main": "img-jar.js",
-  "repository" : {
-	  "type" : "git",
-	  "url" : "https://github.com/raphaelbs/img-jar.git"
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/raphaelbs/img-jar.git"
   },
   "maintainers": [
     {
@@ -32,5 +32,5 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "version": "1.2.3"
+  "version": "1.2.4"
 }
