@@ -4,16 +4,19 @@ var path = require('path');
 // Exemplo de parametros
 //       origem -> finding-dory-xlarge.jpg
 //      destino -> ../novoDory
-//    jsonCorte -> {x : 180, y : 150, h : 300, w : 350}
+//   tamanhoMax -> 200
+//    jsonCorte -> {x : 180, y : 150, h : 300, w : 350}  - (opcional)
 // jsonTamanhos -> {"thumb": 50, "medio":0.5}            - (opcional)
 //     callback -> function (error, stdout, stderr)      - (opcional)
-function imgJar(origem, destino, jsonCorte, jsonTamanhos, callback){
-	if(typeof jsonTamanhos === 'function'){
-		callback = jsonTamanhos;
-		jsonTamanhos = undefined;
+function imgJar(origem, destino, tamanhoMax, jsonCorte, jsonTamanhos, callback){
+	if(typeof tamanhoMax === 'function'){
+		callback = tamanhoMax;
+		tamanhoMax = undefined;
 	}
-	var comando = 'java -jar "' + path.join(__dirname, 'img-jar.jar') + '" "' + origem + '" "' + destino + '" "' + JSON.stringify(jsonCorte) + '"';
-	if(jsonTamanhos) comando += ' "' + JSON.stringify(jsonTamanhos) + '"';
+	var comando = 'java -jar "' + path.join(__dirname, 'img-jar.jar') + '" "' +
+	origem + '" "' + destino + '" "' + tamanhoMax + '"';
+	if(jsonCorte || jsonCorte == null) comando += ' "' + JSON.stringify(jsonCorte) + '"';
+	if(jsonTamanhos || jsonTamanhos == null) comando += ' "' + JSON.stringify(jsonTamanhos) + '"';
 	console.log(comando);
 	exec(comando, callback);
 }
