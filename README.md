@@ -1,7 +1,7 @@
 # img-jar
 
 An embeed java image processor to crop and create resized images.
-You can access the Java code (here)[https://github.com/raphaelbs/img-jar-java].
+You can access the Java code [here](https://github.com/raphaelbs/img-jar-java).
 
 ### Installation
 
